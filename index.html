@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Web Stranica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <div class="logo">MojPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Početna</a></li>
+            <li><a href="#gallery">Galerija</a></li>
+            <li><a href="#about">O meni</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Početna sekcija -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Dobrodošli na moju web stranicu</h1>
+            <p>Ovo je početak nečeg predivnog. Ovdje ćemo ubaciti tvoje tekstove i slike.</p>
+            <a href="#gallery" class="btn">Pogledaj galeriju</a>
+        </div>
+    </section>
+
+    <!-- Galerija sekcija -->
+    <section id="gallery" class="section">
+        <h2>Galerija</h2>
+        <div class="gallery-grid">
+            <!-- Ovdje ćemo kasnije dodati slike -->
+            <div class="gallery-item placeholder">Slika 1</div>
+            <div class="gallery-item placeholder">Slika 2</div>
+            <div class="gallery-item placeholder">Slika 3</div>
+        </div>
+    </section>
+
+    <!-- O nama sekcija -->
+    <section id="about" class="section bg-light">
+        <h2>O meni</h2>
+        <p>Ovdje možeš napisati par rečenica o sebi, svom poslu ili hobiju.</p>
+    </section>
+
+    <!-- Kontakt sekcija -->
+    <section id="contact" class="section">
+        <h2>Kontakt</h2>
+        <p>Javite se za suradnju!</p>
+        <div class="contact-links" style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+            <a href="mailto:tvoj@email.com" class="btn btn-outline">Pošalji Email</a>
+            <a href="tel:+385994008998" class="btn">Nazovi: +385 99 400 8998</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Moja Web Stranica. Sva prava pridržana.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
