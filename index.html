@@ -3,76 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Web Stranica</title>
+    <title>AKB CREATIVE HOUSE</title>
+    <!-- Google Fonts: Outfit (modern geometric) and Inter (clean reading) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigacija -->
-    <nav class="navbar">
-        <div class="logo">MojPortfolio</div>
-        <ul class="nav-links">
-            <li><a href="#home">Početna</a></li>
-            <li><a href="#gallery">Galerija</a></li>
-            <li><a href="#about">O meni</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <!-- Navigation -->
+    <nav class="navbar hidden-onload">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="assets/logo.png" alt="AKB CREATIVE HOUSE" class="nav-logo"></a>
+            <div class="nav-links">
+                <a href="#o-nama" data-i18n="nav_about">O nama</a>
+                <a href="#usluge" data-i18n="nav_services">Usluge</a>
+                <a href="#galerija" data-i18n="nav_gallery">Galerija</a>
+                <a href="#zasto-mi" data-i18n="nav_why">Zašto mi</a>
+                <a href="#kontakt" class="btn-primary-small" data-i18n="nav_contact">Kontakt</a>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="hr" title="Hrvatski">HR</button>
+                <button class="lang-btn" data-lang="en" title="English">EN</button>
+                <button class="lang-btn" data-lang="es" title="Español">ES</button>
+                <button class="lang-btn" data-lang="it" title="Italiano">IT</button>
+                <button class="lang-btn" data-lang="pt" title="Português">PT</button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Početna sekcija -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Dobrodošli na moju web stranicu</h1>
-            <p>Ovo je početak nečeg predivnog. Ovdje ćemo ubaciti tvoje tekstove i slike.</p>
-            <a href="#gallery" class="btn">Pogledaj galeriju</a>
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav">
+        <a href="#o-nama" data-i18n="nav_about">O nama</a>
+        <a href="#usluge" data-i18n="nav_services">Usluge</a>
+        <a href="#galerija" data-i18n="nav_gallery">Galerija</a>
+        <a href="#zasto-mi" data-i18n="nav_why">Zašto mi</a>
+        <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
+        <div class="mobile-language-switcher">
+            <button class="lang-btn active" data-lang="hr">HR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="it">IT</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="pocetna">
+        <!-- Pozadinska slika je dodana u style.css -->
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal-on-load">
+            <h1 class="hero-title" data-i18n="hero_title">Imate osjećaj da ste zapeli u valovima?</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Potražite nas i rado ćemo stvoriti bonacu u Vašem poslovanju.</p>
+            <a href="#o-nama" class="scroll-down">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- O nama -->
+    <section class="about section-padding" id="o-nama">
+        <div class="container reveal">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" data-i18n="about_title">O nama</h2>
+                    <p class="lead" data-i18n="about_desc"><strong>AKB CREATIVE HOUSE</strong> je kreativna digitalna agencija inspirirana Jadranom, a nastala je s ciljem da malim i srednjim poduzetnicima te jahtaškim brendovima pruži jasan smjer, snažan vizual i stabilan rast.</p>
+                    
+                    <div class="mission-vision">
+                        <div class="mv-box">
+                            <h3 data-i18n="about_mission_title">Naša misija</h3>
+                            <p data-i18n="about_mission_desc">Pomažemo malim i srednjim poduzećima, posebno u turizmu i ugostiteljstvu, da izgrade snažnu online prisutnost kroz izradu modernih web stranica i vođenje društvenih mreža.</p>
+                        </div>
+                        <div class="mv-box">
+                            <h3 data-i18n="about_vision_title">Naša vizija</h3>
+                            <p data-i18n="about_vision_desc">Postati pouzdan partner poduzetnicima u Hrvatskoj i šire koji žele jednostavno i učinkovito unaprijediti svoje digitalno poslovanje.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slika o agenciji -->
+                <div class="about-image">
+                    <img src="assets/projekt_1e01.jpeg" alt="O nama - AKB Creative House" class="about-img">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Galerija sekcija -->
-    <section id="gallery" class="section">
-        <h2>Galerija</h2>
-        <div class="gallery-grid">
-            <!-- Ovdje ćemo kasnije dodati slike -->
-            <div class="gallery-item"><img src="assets/projekt_1e01.jpeg" alt="Projekt 1" style="width: 100%; height: auto; border-radius: 8px;"></div>
-            <div class="gallery-item"><img src="assets/projekt_430f.jpeg" alt="Projekt 2" style="width: 100%; height: auto; border-radius: 8px;"></div>
-            <div class="gallery-item"><img src="assets/projekt_5d58.jpeg" alt="Projekt 3" style="width: 100%; height: auto; border-radius: 8px;"></div>
-            <div class="gallery-item"><img src="assets/projekt_5f4f.jpeg" alt="Projekt 4" style="width: 100%; height: auto; border-radius: 8px;"></div>
-            <div class="gallery-item"><img src="assets/projekt_cf91.jpeg" alt="Projekt 5" style="width: 100%; height: auto; border-radius: 8px;"></div>
-            
-            <!-- Videozapisi -->
-            <div class="gallery-item"><video src="assets/videos/video1_mali.mp4" controls style="width: 100%; height: auto; border-radius: 8px;"></video></div>
-            <div class="gallery-item"><video src="assets/videos/video2_mali.mp4" controls style="width: 100%; height: auto; border-radius: 8px;"></video></div>
-            <div class="gallery-item"><video src="assets/videos/video3_mali.mp4" controls style="width: 100%; height: auto; border-radius: 8px;"></video></div>
-            <div class="gallery-item"><video src="assets/videos/video4_mali.mp4" controls style="width: 100%; height: auto; border-radius: 8px;"></video></div>
+    <!-- Što radimo? -->
+    <section class="services section-padding bg-light" id="usluge">
+        <div class="container reveal">
+            <h2 class="section-title center" data-i18n="services_title">Što radimo?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="emoji-icon">⚓</span>
+                    <h3 data-i18n="srv_social">Vođenje i izrada<br>društvenih mreža</h3>
+                </div>
+                <div class="service-card">
+                    <span class="emoji-icon">⚓</span>
+                    <h3 data-i18n="srv_email">E-mail marketing<br>kampanje</h3>
+                </div>
+                <div class="service-card">
+                    <span class="emoji-icon">⚓</span>
+                    <h3 data-i18n="srv_photo">Profesionalno fotografiranje<br>i video</h3>
+                </div>
+                <div class="service-card">
+                    <span class="emoji-icon">⚓</span>
+                    <h3 data-i18n="srv_web">Izrada modernih<br>web stranica</h3>
+                </div>
+                <div class="service-card">
+                    <span class="emoji-icon">⚓</span>
+                    <h3 data-i18n="srv_events">Organizacija i promocija<br>evenata</h3>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- O nama sekcija -->
-    <section id="about" class="section bg-light">
-        <h2>O meni</h2>
-        <p>Ovdje možeš napisati par rečenica o sebi, svom poslu ili hobiju.</p>
-    </section>
-
-    <!-- Kontakt sekcija -->
-    <section id="contact" class="section">
-        <h2>Kontakt</h2>
-        <p>Javite se za suradnju!</p>
-        <div class="contact-links" style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
-            <a href="mailto:tvoj@email.com" class="btn btn-outline">Pošalji Email</a>
-            <a href="tel:+385994008998" class="btn">Nazovi: +385 99 400 8998</a>
+    <!-- S kime radimo? -->
+    <section class="target-audience section-padding" id="s-kime-radimo">
+        <div class="container reveal">
+            <div class="audience-content">
+                <h2 class="section-title" data-i18n="target_title">S kime radimo?</h2>
+                <ul class="audience-list">
+                    <li><span class="emoji-icon">⚓</span> <span data-i18n="target_1">malim i srednjim poduzetnicima</span></li>
+                    <li><span class="emoji-icon">⚓</span> <span data-i18n="target_2">turističkim i lifestyle brandovima</span></li>
+                    <li><span class="emoji-icon">⚓</span> <span data-i18n="target_3">jahtaškim i nautičkim biznisima na Jadranu</span></li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Moja Web Stranica. Sva prava pridržana.</p>
+    <!-- Galerija -->
+    <section class="gallery section-padding bg-light" id="galerija">
+        <div class="container reveal">
+            <h2 class="section-title center" data-i18n="gallery_title">Naši radovi</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/projekt_1e01.jpeg" alt="Projekt 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/projekt_430f.jpeg" alt="Projekt 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/projekt_5d58.jpeg" alt="Projekt 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/projekt_5f4f.jpeg" alt="Projekt 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/projekt_cf91.jpeg" alt="Projekt 5">
+                </div>
+                <!-- Videozapisi -->
+                <div class="gallery-item">
+                    <video autoplay muted loop playsinline class="gallery-video">
+                        <source src="assets/videos/video1_mali.mp4" type="video/mp4">
+                        Vaš preglednik ne podržava video oznaku.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video autoplay muted loop playsinline class="gallery-video">
+                        <source src="assets/videos/video2_mali.mp4" type="video/mp4">
+                        Vaš preglednik ne podržava video oznaku.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video autoplay muted loop playsinline class="gallery-video">
+                        <source src="assets/videos/video3_mali.mp4" type="video/mp4">
+                        Vaš preglednik ne podržava video oznaku.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video autoplay muted loop playsinline class="gallery-video">
+                        <source src="assets/videos/video4_mali.mp4" type="video/mp4">
+                        Vaš preglednik ne podržava video oznaku.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Banner -->
+    <section class="brand-banner reveal">
+        <video autoplay muted loop playsinline class="banner-video">
+            <source src="assets/videos/video3_mali.mp4" type="video/mp4">
+        </video>
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h2 data-i18n="banner_title">Vaš brend na pravoj je ruti!</h2>
+        </div>
+    </section>
+
+    <!-- Zašto odabrati nas? -->
+    <section class="why-us section-padding bg-light" id="zasto-mi">
+        <div class="container reveal">
+            <h2 class="section-title center" data-i18n="why_title">Zašto odabrati AKB creative house?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-number">01</div>
+                    <h3 data-i18n="why_1_title">Osobni pristup</h3>
+                    <p data-i18n="why_1_desc">Radite direktno sa mnom.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">02</div>
+                    <h3 data-i18n="why_2_title">Jasna strategija</h3>
+                    <p data-i18n="why_2_desc">Bez lutanja do cilja.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">03</div>
+                    <h3 data-i18n="why_3_title">Premium vizual</h3>
+                    <p data-i18n="why_3_desc">Estetika koja pouzdano prodaje.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">04</div>
+                    <h3 data-i18n="why_4_title">Fleksibilnost</h3>
+                    <p data-i18n="why_4_desc">Prilagodba Vašem tempu i sezoni, ali javite se na vrijeme!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <footer class="footer" id="kontakt">
+        <div class="container reveal">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="AKB CREATIVE HOUSE" class="footer-logo-img">
+                    <p data-i18n="footer_desc">Pružamo jasan smjer, snažan vizual i stabilan rast.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3 data-i18n="footer_contact_title">Kontaktirajte nas</h3>
+                    <p class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="#" class="open-contact-modal">tbd</a>
+                    </p>
+                    <p class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="#" class="open-contact-modal">akbcreativehouse@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AKB CREATIVE HOUSE. <span data-i18n="footer_rights">Sva prava pridržana.</span></p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="section-title center" style="margin-bottom: 2rem; font-size: 2rem;" data-i18n="modal_title">Pošalji upit</h2>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Zamijeni 'YOUR_ACCESS_KEY_HERE' s pravim ključem koji ćeš dobiti na web3forms.com -->
+                <input type="hidden" name="access_key" value="3709a7e2-a528-408f-9b8c-36ae7b892d7a">
+                <input type="hidden" name="subject" value="Novi upit s weba - AKB CREATIVE HOUSE">
+                <!-- Redirect on success or disable it -->
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                <div class="form-group">
+                    <label for="c-name" data-i18n="modal_name">Vaše ime:</label>
+                    <input type="text" id="c-name" name="Ime" required placeholder="npr. Ivan Horvat" data-i18n-placeholder="modal_name_ph">
+                </div>
+                <div class="form-group">
+                    <label for="c-contact" data-i18n="modal_contact">Vaš Email ili broj telefona:</label>
+                    <input type="text" id="c-contact" name="Kontakt" required placeholder="npr. ivan@email.com ili 091..." data-i18n-placeholder="modal_contact_ph">
+                </div>
+                <div class="form-group radio-group">
+                    <label data-i18n="modal_type">Tip upita:</label>
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="Tip_upita" value="Regularno" checked>
+                            <span class="radio-custom"></span>
+                            <span data-i18n="modal_reg">Regularno</span>
+                        </label>
+                        <label class="radio-label priority-high">
+                            <input type="radio" name="Tip_upita" value="Hitno">
+                            <span class="radio-custom"></span>
+                            <span data-i18n="modal_urg">Hitno!</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="c-message" data-i18n="modal_msg">Vaša poruka / opis projekta:</label>
+                    <textarea id="c-message" name="Poruka" rows="4" required placeholder="Opišite nam kako vam možemo pomoći..." data-i18n-placeholder="modal_msg_ph"></textarea>
+                </div>
+                <!-- Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <button type="submit" class="btn-primary-small submit-btn" data-i18n="modal_submit">Pošalji upit</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
